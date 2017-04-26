@@ -111,6 +111,12 @@ namespace ConsoleBierClient.BierenServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://vdab.be/bierenservice/IBierenService/GetBierenMetWoord", ReplyAction="http://vdab.be/bierenservice/IBierenService/GetBierenMetWoordResponse")]
         System.Threading.Tasks.Task<ConsoleBierClient.BierenServiceReference.Bier[]> GetBierenMetWoordAsync(string woord);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://vdab.be/bierenservice/IBierenService/GetStrafsteBieren", ReplyAction="http://vdab.be/bierenservice/IBierenService/GetStrafsteBierenResponse")]
+        ConsoleBierClient.BierenServiceReference.Bier[] GetStrafsteBieren();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://vdab.be/bierenservice/IBierenService/GetStrafsteBieren", ReplyAction="http://vdab.be/bierenservice/IBierenService/GetStrafsteBierenResponse")]
+        System.Threading.Tasks.Task<ConsoleBierClient.BierenServiceReference.Bier[]> GetStrafsteBierenAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -162,6 +168,14 @@ namespace ConsoleBierClient.BierenServiceReference {
         
         public System.Threading.Tasks.Task<ConsoleBierClient.BierenServiceReference.Bier[]> GetBierenMetWoordAsync(string woord) {
             return base.Channel.GetBierenMetWoordAsync(woord);
+        }
+        
+        public ConsoleBierClient.BierenServiceReference.Bier[] GetStrafsteBieren() {
+            return base.Channel.GetStrafsteBieren();
+        }
+        
+        public System.Threading.Tasks.Task<ConsoleBierClient.BierenServiceReference.Bier[]> GetStrafsteBierenAsync() {
+            return base.Channel.GetStrafsteBierenAsync();
         }
     }
 }

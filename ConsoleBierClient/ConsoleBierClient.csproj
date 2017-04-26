@@ -52,6 +52,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\EtikettenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RadenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -69,12 +79,36 @@
     <None Include="Service References\BierenServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\EtikettenService\etikettenservice.wsdl" />
+    <None Include="Service References\EtikettenService\etikettenservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EtikettenService\service.wsdl" />
+    <None Include="Service References\EtikettenService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RadenService\alcoholradenservice.wsdl" />
+    <None Include="Service References\RadenService\alcoholradenservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RadenService\BierenServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RadenService\ConsoleBierClient.RadenService.RaadResultaat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RadenService\service.wsdl" />
+    <None Include="Service References\RadenService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BierenServiceReference\" />
+    <WCFMetadataStorage Include="Service References\EtikettenService\" />
+    <WCFMetadataStorage Include="Service References\RadenService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BierenServiceReference\configuration91.svcinfo" />
@@ -84,6 +118,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BierenServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RadenService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RadenService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RadenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EtikettenService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EtikettenService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EtikettenService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

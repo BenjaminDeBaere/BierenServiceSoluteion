@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ServiceModel;
 
 namespace BierenServiceLibrary
 {
+    [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerCall)]
     public class BierenService: IBierenService
     {
         private static Bier[] bieren =
@@ -32,6 +34,13 @@ namespace BierenServiceLibrary
             var woordInKleineLetters = woord.ToLower();
             return (from bier in bieren
                     where bier.Naam.ToLower().Contains(woordInKleineLetters)
+                    select bier).ToList();
+        }
+
+        public List<Bier> GetStrafsteBieren()
+        {
+            return (from bier in bieren
+                    where bier.Alcohol == bieren.Max(b => b.Alcohol)
                     select bier).ToList();
         }
     }
